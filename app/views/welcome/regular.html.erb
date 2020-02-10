@@ -1,0 +1,18 @@
+
+<br>
+<br>
+<br>
+<h1>Welcome !</h1>
+<br>
+<p>Te voilà dans notre site de gossips ! Tous les ragots sont ci-dessous, clique sur un des liens pour en voir plus.</p>
+<br>
+<% @gossips.each_with_index do |gossip, index| %>
+
+  <p>
+  <a href = "/gossip/<%=index.to_i + 1%>" ><%= gossip.user.first_name %> : <%= gossip.title %><a/>
+  </p>
+
+<% end %>
+
+
+
